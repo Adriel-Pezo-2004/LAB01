@@ -32,11 +32,11 @@ public class Principal {
 		MostrarRectangulos(r1, r2);
                 rectanguloSobre(r1, r2);
 		//CASO DE PRUEBA SI 2 RECTANGULOS SE ENCUENTRAN                       
-		coo1 = new Coordenada(1,1);
-		coo2 = new Coordenada(2,2);
+		coo1 = new Coordenada(-2,-2);
+		coo2 = new Coordenada(3,5);
 		r1 = new Rectangulo(coo1,coo2);
-		coo3 = new Coordenada(2,2);
-		coo4 = new Coordenada(3,3);
+		coo3 = new Coordenada(3,5);
+		coo4 = new Coordenada(4,4);
 		r2 = new Rectangulo(coo3,coo4);
 		MostrarRectangulos(r1, r2);
                 rectanguloSobre(r1, r2);
