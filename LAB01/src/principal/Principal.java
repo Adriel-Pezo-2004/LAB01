@@ -43,22 +43,22 @@ public class Principal {
                 
 		Scanner entradaporteclado = new Scanner(System.in);
 		int n;
-		System.out.println("======================================================================");
-		System.out.print("INGRESE LA LONGITUD DEL CONTENEDOR DE RECTANGULOS:   ");
+		System.out.println("********************************************");
+		System.out.print("INGRESE CUANTOS RECTÁNGULOS VA A INGRESAR: ");
 		n = entradaporteclado.nextInt();
-		System.out.println("======================================================================");
+		System.out.println("********************************************");
 		ContainerRect container = new ContainerRect(n);
 		//INGRESO DEL N. DE RECTANGULOS
 		for(int i=1;i<=n;i++){
                         //COORDENADAS DEL RECTANGULO
 			double x1,x2,y1,y2;
-			System.out.print("Ingrese una esquina del rectángulo "+i+" :   ");
+			System.out.print("INGRESE ESQUINA DEL RECTÁNGULO "+i+" :   ");
 			x1 = entradaporteclado.nextDouble();
 			y1 = entradaporteclado.nextDouble();
-			System.out.print("Ingrese la esquina opuesta del rectángulo"+i+" :   ");
+			System.out.print("INGRESE LA OTRA ESQUINA DEL RECTÁNGULOS"+i+" :   ");
 			x2 = entradaporteclado.nextDouble();
 			y2 = entradaporteclado.nextDouble();
-			System.out.println("======================================================================");
+			System.out.println("********************************************");
 			container.addRectagulo(new Rectangulo(new Coordenada(x1,y1),new Coordenada(x2,y2)));
 		}
 		entradaporteclado.close();
@@ -67,17 +67,17 @@ public class Principal {
 	}
 	//METODO PARA MOSTRAR SI ENCUENTRAN 2 RECTANGULOS CON CLASE VERIFICAR    
 	public static void MostrarRectangulos(Rectangulo r1,Rectangulo r2){
-		System.out.println("=============================================");
-		System.out.println("Rectangulo A = "+r1);
-		System.out.println("Rectangulo B = "+r2);
+		System.out.println("********************************************");
+		System.out.println("RECTÁNGULO A = "+r1);
+		System.out.println("RECTÁNGULO B = "+r2);
 		if(Verificador.esJunto(r1, r2)==true){
-			System.out.println("Rectangulos A y B se juntan");	
+			System.out.println("RECTÁNGULOS A y B SE JUNTAN");	
 		}else if(Verificador.esDisjunto(r1, r2)==true){
-			System.out.println("Rectangulos A y B son disjuntos");
+			System.out.println("RECTÁNGULOS A Y B SON DISJUNTOS");
 			
 		}else if(Verificador.esSobrePos(r1, r2)==true){
-			System.out.println("Rectangulos A y B se sobreponen");
-			System.out.println("Area de sobreposicion = "+
+			System.out.println("RECTÁNGULOS A Y B SE SOBREPONEN");
+			System.out.println("AREA DE SOBREPOSICIÓN: "+
 			rectanguloSobre(r1, r2).calculoArea());
 		}
 		

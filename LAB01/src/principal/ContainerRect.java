@@ -53,8 +53,8 @@ public class ContainerRect {
 		arrDistancias[numRec-1] = Coordenada.distancia(R.getCORNR1(), R.getCORNR2());
 		arrAreas[numRec-1] = R.calculoArea();
 		if(numRec==n) {
-			System.out.println("Ya no se pueden agregar mas rectangulos!!");
-			System.out.println("======================================================================");
+			System.out.println("INGRESO COMPLETO");
+			System.out.println("********************************************");
 		}
 	}
 	
@@ -62,7 +62,7 @@ public class ContainerRect {
         @Override
 	public String toString() {
 		
-		System.out.println("Rectangulo	Coordenadas			Distancia	Area");
+		System.out.println("RECTÁNGULO	COORDENADAS                 DISTANCIA       AREA");
  		for( int i=0 ; i<n ;i++){
 			System.out.println("     "+(i+1)+"		"+arrRectangulos[i].toString()+"	"+Math.round(arrDistancias[i]*1000d)/1000d+"		"+Math.round(arrAreas[i]*100d)/100d);
 											}
